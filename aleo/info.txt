@@ -1,1 +1,1 @@
-git clone https://github.com/sdamours/miners-public.git; cd ./miners-public/aleo/aleominer3.0.14/; ./aleominer -u stratum+ssl://aleo-asia.f2pool.com:4420 -w <account_name>.$(hostname) >> ./aleominer.log 2>&1 
+~/vast create instance <your-instance>  --price <your-price> --disk 2 --image nvidia/cuda:12.0.0-devel-ubuntu22.04 --onstart-cmd 'git clone https://github.com/sdamours/miners-public.git; cd ./miners-public/aleo/aleominer3.0.14/; ./aleominer -u stratum+ssl://aleo-asia.f2pool.com:4420 -w <your-account>.$(hostname) >> ./aleominer.log 2>&1' --ssh --direct
