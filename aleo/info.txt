@@ -1,0 +1,1 @@
+git clone https://github.com/sdamours/miners-public.git; cd ./miners-public/aleo/aleominer3.0.14/; ./aleominer -u stratum+ssl://aleo-asia.f2pool.com:4420 -w <account_name>.$(hostname) >> ./aleominer.log 2>&1 
