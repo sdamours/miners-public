@@ -1,0 +1,1 @@
+~/vast create instance <your-instance>  --price <your-price> --disk 2 --image nvidia/cuda:12.0.0-devel-ubuntu22.04 --onstart-cmd 'git clone https://github.com/sdamours/miners-public.git; cd ./miners-public/clore/t-rex-0.26.8-linux/; ./t-rex -a kawpow -o stratum+tcp://de.clore.herominers.com:1163 -u <your-wallet>.<your-worker> -p x' --ssh --direct
