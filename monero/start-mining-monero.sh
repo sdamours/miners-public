@@ -63,7 +63,7 @@ echo "Detected threads: $THREADS"
 # Launch miner
 # -------------------------------
 
-exec /home/sdamours/miners-public/xmrig \
+exec /home/sdamours/miners-public/monero/xmrig \
 -o ca.monero.herominers.com:1111 \
 -u 49yMArqpSkG58sYr6RHrcTKqJU1o7BcEmdsGfdsjBTMAcHXHDBsevvmCF8RtTuYAVo2G7mvQXHh5Q3i7gNMs7vNpTEPM5fo.$(hostname) \
 -a rx/0 \
