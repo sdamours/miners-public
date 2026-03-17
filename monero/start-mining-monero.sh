@@ -70,4 +70,4 @@ echo "Detected threads: $THREADS"
 -k \
 -t $THREADS \
 --randomx-1gb-page \
---log-file=xmrig.log
+--log-file=xmrig.$(hostname).log
