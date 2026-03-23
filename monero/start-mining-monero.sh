@@ -23,7 +23,8 @@ while true; do
 
         # relaunch one per detected process (non-blocking)
         for ((i=0; i<current_count; i++)); do
-            /home/sdamours/xmrig-on-runpod -t $(( ($(nproc) / 4 - 1) )) -o ca.monero.herominers.com:1111 -u 49yMArqpSkG58sYr6RHrcTKqJU1o7BcEmdsGfdsjBTMAcHXHDBsevvmCF8RtTuYAVo2G7mvQXHh5Q3i7gNMs7vNpTEPM5fo.$(hostname)R -a rx/0 -k --randomx-1gb-pages --log-file=xmrig.log &
+            /home/sdamours/xmrig-on-runpod -t 10 -o ca.monero.herominers.com:1111 -u 49yMArqpSkG58sYr6RHrcTKqJU1o7BcEmdsGfdsjBTMAcHXHDBsevvmCF8RtTuYAVo2G7mvQXHh5Q3i7gNMs7vNpTEPM5fo.$(hostname)R -a rx/0 -k --randomx-1gb-pages --log-file=xmrig.log &
+            #/home/sdamours/xmrig-on-runpod -t $(( ($(nproc) / 4 - 1) )) -o ca.monero.herominers.com:1111 -u 49yMArqpSkG58sYr6RHrcTKqJU1o7BcEmdsGfdsjBTMAcHXHDBsevvmCF8RtTuYAVo2G7mvQXHh5Q3i7gNMs7vNpTEPM5fo.$(hostname)R -a rx/0 -k --randomx-1gb-pages --log-file=xmrig.log &
         done
     fi
 
