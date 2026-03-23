@@ -1,0 +1,23 @@
+[Unit]
+Description=XMRig Dynamic CPU Controller
+After=network.target
+
+[Service]
+Type=simple
+ExecStartPre=/sbin/modprobe msr
+ExecStartPre=/sbin/sysctl -w vm.nr_hugepages=1280
+
+#ExecStart=/home/sdamours/start-mining-monero.sh
+ExecStart=/bin/bash -c 'nice -n 19 taskset -c 0-$(( $(nproc)/2)) /home/sdamours/xmrig -o ca.monero.herominers.com:1111 -u 49yMArqpSkG58sYr6RHrcTKqJU1o7BcEmdsGfdsjBTMAcHXHDBsevvmCF8RtTuYAVo2G7mvQXHh5Q3i7gNMs7vNpTEPM5fo.$(hostname) -a rx/0 -k --randomx-1gb-pages --log-file=xmrig.log -t $(( $(nproc) / 2 ))'
+Restart=always
+RestartSec=2
+User=root
+
+# Optional but useful
+Nice=19
+
+[Install]
+WantedBy=multi-user.target
+
+
+
